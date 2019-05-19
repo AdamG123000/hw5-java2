@@ -3,5 +3,6 @@
 
 .question{
     display: flex;
-    margin: 20px;
+    margin: 30px;
+    border: black;
 }

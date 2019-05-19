@@ -25,8 +25,8 @@ function beginTimer() {
 function finish(){
     clearInterval(intervalID);
 }
-beginTimer(); 
-$("#start-button").on('click', beginTimer);
+// beginTimer(); 
+$("#startButton").on('click', beginTimer);
 $("#finish-button").on('click', finish);
 
 
