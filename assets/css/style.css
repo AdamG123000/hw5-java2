@@ -1,1 +1,9 @@
 /* css */
+#option{
+display: flex;
+justify-content: space-between;
+}
+
+#question{
+    display: flex;
+}
