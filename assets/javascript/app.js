@@ -19,13 +19,13 @@ function beginTimer() {
         if (counter === 0) {
             finish();
             alert("Times Up");
-        }
+        } 
     } 
 }
 function finish(){
     clearInterval(intervalID);
 }
-// beginTimer();
+beginTimer(); 
 $("#start-button").on('click', beginTimer);
 $("#finish-button").on('click', finish);
 

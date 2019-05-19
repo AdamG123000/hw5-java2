@@ -1,9 +1,7 @@
 /* css */
-#option{
-display: flex;
-justify-content: space-between;
-}
 
-#question{
+
+.question{
     display: flex;
+    margin: 20px;
 }

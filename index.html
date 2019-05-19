@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>hw5 Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+    <script src="./assets/javascript/app.js"></script>
 </head>
 <body>
     <div class="container" id="triviaContainer">
@@ -17,9 +17,7 @@
 
         <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span>Seconds!</p>
 
-    <div id="container">
-
-        <div id="question-1" class="question"></div>
+        <div id="question-1" class="question">What is the largest animal?</div>
             <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span></label>
             <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></span></label>
             <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span></label>
@@ -27,7 +25,15 @@
 
         </div>
 
-        <div id="question-2" class="question"></div>
+        <div id="question-2" class="question">What animal is blue?</div>
+            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Black Panther</span></label>
+            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Red Panda</span></label>
+            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Blue Whale</span></label>
+            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span>Unicorn</label>
+
+        </div>
+
+        <div id="question-3" class="question">What animal lives in the water?</div>
             <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span></label>
             <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></span></label>
             <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span></label>
@@ -35,19 +41,11 @@
 
         </div>
 
-        <div id="question-3" class="question"></div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span></label>
-
-        </div>
-
-        <div id="question-4" class="question"></div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span></label>
+        <div id="question-4" class="question">Which an ape?</div>
+            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span>Bigfoot</label>
+            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></spanHam>Hammerhead Shark</label>
+            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span>Rhino</label>
+            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span>Dragon</label>
 
         </div>
 
@@ -83,9 +81,7 @@
 
         </div>
 
-    </div>
-
-            <button class="finish-button" id="finishButton">Finish</button>
+        <button class="finish-button" id="finishButton">Finish</button>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
