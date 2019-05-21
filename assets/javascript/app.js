@@ -10,7 +10,6 @@
 var counter = 30;
 var intervalID;
 
-
 function beginTimer() {
     clearInterval(intervalID);
     intervalID = setInterval(decrement, 1000);
@@ -29,40 +28,17 @@ function finishQuiz(){
     //display results page
 }
 // beginTimer(); 
-$("#startButton").on('click', beginTimer);
+$("#start-button").on('click', beginTimer);
 $("#finish-button").on('click', finishQuiz);
 
 
 //filling out the quiz
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const finishButton = document.getElementById('sumbit');
+// const quizContainer = document.getElementById('quiz');
+// const resultsContainer = document.getElementById('results');
+// const finishButton = document.getElementById('sumbit');
 
-function buildQuiz(){
-    const output = [];
-    //for each qustion
-    quizQuestions.forEach(
-        (_currentQuestion, _questionNumber) => {
-            const answers = [];
-            for (lettre in _currentQuestion.answers){
-                answers.push(<label>
-                    <input type="radio" name="question ${questionNumber}" value="${letter}">
-                </label>);
-            }
-        }
-    )
-}
 
-function showResults(){}
-
-//display quiz when page loads
-buildQuiz();
-
-//show results when submit button is clicked
-submitButton.addEventListener('click', showResults);
-
-//display quiz questions 
-const quizQuestions = [
+var quizQuestions = [
     {
         question: "What animal is largest?",
         answers: {
@@ -152,7 +128,42 @@ const quizQuestions = [
     }
 ];
 
+console.log(quizQuestions[i]);
+
+function buildQuiz(){
+   
+    var displayQuestions = document.createElement("<p>");
+    para.innerHTML = quizQuestions[0,1]
+
+
+
+
+
+
+    for (var i = 0; i < quizQuestions.length; i ++) {
+        displayQuestions.push(quizQuestions.question[i], quizQuestions.answers[i]);
+    }
+
+    for (var i = 0; i < quizQuestions.length; i++) {
+        var holder = document.createElement("<p>");
+        $("#quiz").append(holder);
+
+        $(holder).attr("id",quizQuestions[i]).text(quizQuestions[i]);
+    }
+
+    
+
+}
+
+function showResults(){}
+
+//display quiz when page loads
 buildQuiz();
+
+//show results when submit button is clicked
+submitButton.addEventListener('click', showResults);
+
+
 
 
 
