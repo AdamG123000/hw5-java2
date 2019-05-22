@@ -41,99 +41,105 @@ $("#finish-button").on('click', finishQuiz);
 var quizQuestions = [
     {
         question: "What animal is largest?",
-        answers: {
-            a: "Whale",
-            b: "Dophin",
-            c: "Rat",
-            d: "Chinchilla"
-        },
-        correctAnswer: "a"
+        answers: [
+            "Whale",
+            "Dophin",
+            "Rat",
+            "Chinchilla"
+        ],
+        correctAnswer: "Whale"
     },
 
     {
         question: "What animal is blue?",
-        answers: {
-            a: "Black Panther",
-            b: "Red Panda",
-            c: "Blue Whale",
-            d: "Unicorn"
-        },
-        correctAnswer: "c"
+        answers: [
+            "Black Panther",
+            "Red Panda",
+            "Blue Whale",
+            "Unicorn"
+        ],
+        correctAnswer: "Blue Whale"
     },
 
     {
         question: "What animal lives in the water?",
-        answers: {
-            a: "Human",
-            b: "Bear",
-            c: "Wolf",
-            d: "Fish"
-        },
-        correctAnswer: "d"
+        answers: [
+            "Human",
+            "Bear",
+            "Wolf",
+            "Fish"
+        ],
+        correctAnswer: "Fish"
     },
 
     {
         question: "Which animal is an ape?",
-        answers: {
-            a: "Bigfoot",
-            b: "Dragon",
-            c: "Rhino",
-            d: "Hammerhead Shark"
-        },
-        correctAnswer: "a"
+        answers: [
+            "Bigfoot",
+            "Dragon",
+            "Rhino",
+            "Hammerhead Shark"
+        ],
+        correctAnswer: "Bigfoot"
     },
 
     {
         question: "What animal eats other animals?",
-        answers: {
-            a: "Horse",
-            b: "Tiger",
-            c: "Goat",
-            d: "Elephant"
-        },
-        correctAnswer: "b"
+        answers: [
+            "Horse",
+            "Tiger",
+            "Goat",
+            "Elephant"
+        ],
+        correctAnswer: "Tiger"
     },
 
     {
         question: "What animal has no limbs?",
-        answers: {
-            a: "Lion",
-            b: "Monkey",
-            c: "Lizard",
-            d: "Snake"
-        },
-        correctAnswer: "d"
+        answers: [
+            "Lion",
+            "Monkey",
+            "Lizard",
+            "Snake"
+        ],
+        correctAnswer: "Snake"
     },
 
     {
         question: "Which animal can code this quiz?",
-        answers: {
-            a: "Orangutan",
-            b: "Human",
-            c: "Chimpanzee",
-            d: "Gorilla"
-        },
-        correctAnswer: "b"
+        answers: [
+            "Orangutan",
+            "Human",
+            "Chimpanzee",
+            "Gorilla"
+        ],
+        correctAnswer: "Human"
     },
 
     {
         question: "What animal makes the best pet?",
-        answers: {
-            a: "Elephant",
-            b: "Platapus",
-            c: "Dog",
-            d: "Lion"
-        },
-        correctAnswer: "c"
+        answers: [
+            "Elephant",
+            "Platapus",
+            "Dog",
+            "Lion"
+        ],
+        correctAnswer: "Dog"
     }
 ];
 
-console.log(quizQuestions[i]);
-
 function buildQuiz(){
    
-    var displayQuestions = document.createElement("<p>");
-    para.innerHTML = quizQuestions[0,1]
+    var displayQuestions = document.createElement('div');
+    for (var i = 0; i < quizQuestions.length; i++) {
+        // displayQuestions.appendChild();
+        console.log(quizQuestions[i]);
+        var currentQuestion = quizQuestions[i];
+        console.log(currentQuestion.question);
+        console.log(currentQuestion.answers);
+
+    }
+    
 
 
 
@@ -141,7 +147,23 @@ function buildQuiz(){
 
 
     for (var i = 0; i < quizQuestions.length; i ++) {
-        displayQuestions.push(quizQuestions.question[i], quizQuestions.answers[i]);
+        // console.log(quizQuestions[i].answers);
+        // console.log(quizQuestions[i].question)
+        var question = quizQuestions[i].question
+        var answers = quizQuestions[i].answers
+        console.log(question);
+        //display question in html
+        $("#quiz-Questions").html(question)
+    
+
+        for (var j = 0; j < answers.length; j++) {
+            console.log(answers[j]);
+            //display answers in html
+            $("#quiz-Answers").html(answers);
+
+
+        }
+        // displayQuestions.push(quizQuestions.question, quizQuestions.answers[i]);
     }
 
     for (var i = 0; i < quizQuestions.length; i++) {
