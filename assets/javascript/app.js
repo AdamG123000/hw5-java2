@@ -97,11 +97,11 @@ var timer;
 
 var game = {
 
-questions: questiosn,
-currentQuestion = 0,
+quizQuestions: quizQuestions,
+currentQuestion: 0,
 counter: counterStartNumber,
-correct = 0,
-incorrect = 0,
+correct: 0,
+incorrect: 0,
 
 //timer countdown function
 countdown: function() {
@@ -119,6 +119,10 @@ countdown: function() {
 //Build game functionality
 
 //Click events
+$(document).on("click", "#start", function() {
+    $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'>30</span> Seconds</h2>");
+    // game.loadQuestion.bind(game)();
+  });
 
 
 
