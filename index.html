@@ -7,95 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
     <!-- <script src="./assets/javascript/app.js"></script> -->
+
+    <!-- jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <div class="container" id="triviaContainer">
-        <h1 class="title">Trivia Game</h1>
+    <!-- trivia game goes here -->
 
-        <button id="start-button">Start</button>
-
-        <p id="remaining-time" class="lead">Remaining Time: <span id="timer"></span>Seconds</p>
-
-        <div id="quiz-Questions"></div>
-        <div id="quiz-Answers"></div>
-
-
-        <button id="finish"></button>
-
-        <div id="results"></div>
-
-        <button class="finish-button" id="finishButton">Finish</button>
-
-
-
-        <!-- <div id="question-1" class="question">What is the largest animal?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Whale</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Dolphin</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Rat</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Chinchilla</span></label>
-
+    <div id="wrapper">
+        <!-- title -->
+        <h1>Trivia Game</h1>
+        <!-- timer -->
+        <div id="sub-wrapper">
+            <!-- quiz questions -->
+            <div id="quiz-area">
+                <button id="start">Start</button>
+            </div>
         </div>
-
-        <div id="question-2" class="question">What animal is blue?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Black Panther</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Red Panda</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Blue Whale</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span>Unicorn</label>
-
-        </div>
-
-        <div id="question-3" class="question">What animal lives in the water?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Fish</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Human</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Bear</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Wolf</span></label>
-
-        </div>
-
-        <div id="question-4" class="question">Which animal is an ape?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1"></span>Bigfoot</label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2"></spanHam>Hammerhead Shark</label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3"></span>Rhino</label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4"></span>Dragon</label>
-
-        </div>
-
-        <div id="question-5" class="question">What animal eats other animals?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Horse</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Tiger</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Goat</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Elephant</span></label>
-
-        </div>
-
-        <div id="question-6" class="question">What animal has no limbs?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Lion</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Monkey</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Lizard</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Snake</span></label>
-
-        </div>
-
-        <div id="question-7" class="question">What animal can code this quiz?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Orangutan</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Human</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Chimpanzee</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Gorilla</span></label>
-
-        </div>
-
-        <div id="question-8" class="question">What animal is a common pet?</div>
-            <label class="option"><input type="radio" name="option" value="1" /> <span id="option-1">Elephant</span></label>
-            <label class="option"><input type="radio" name="option" value="2" /> <span id="option-2">Platupus</span></label>
-            <label class="option"><input type="radio" name="option" value="3" /> <span id="option-3">Lion</span></label>
-            <label class="option"><input type="radio" name="option" value="4" /> <span id="option-4">Dog</span></label>
-
-        </div>
-
-        <button class="finish-button" id="finishButton">Finish</button> -->
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </div>
+       
+    <!-- script -->
     <script type="text/javascript" src="assets/javascript/app.js"> </script>
 </body>
 </html>
