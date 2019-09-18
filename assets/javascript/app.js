@@ -1,43 +1,8 @@
-//javascript
-
-//must create a start button that presents 8 trivia questions
-//when start button is clicked a 30 second count down begins
-//each qusetion has four asnwers to select, only one can selected at a time
-//create a finish button that presents new page with number of correct, incorrect, unasswered questions 
+var card = $("#quiz-area");
+var counterStartNumber = 30;
 
 
-//create timer the counts down from 30 seconds
-var counter = 30;
-var intervalID;
-
-function beginTimer() {
-    clearInterval(intervalID);
-    intervalID = setInterval(decrement, 1000);
-
-    function decrement() {
-        counter--;
-        $("#timer").html("<h2>" + counter + "<h2>");
-        if (counter === 0) {
-            finishQuiz();
-            alert("Times Up");
-        } 
-    } 
-}
-function finishQuiz(){
-    clearInterval(intervalID);
-    //display results page
-}
-// beginTimer(); 
-$("#start-button").on('click', beginTimer);
-$("#finish-button").on('click', finishQuiz);
-
-
-//filling out the quiz
-// const quizContainer = document.getElementById('quiz');
-// const resultsContainer = document.getElementById('results');
-// const finishButton = document.getElementById('sumbit');
-
-
+//list of questions
 var quizQuestions = [
     {
         question: "What animal is largest?",
@@ -128,64 +93,32 @@ var quizQuestions = [
     }
 ];
 
-function buildQuiz(){
-   
-    var displayQuestions = document.createElement('div');
-    for (var i = 0; i < quizQuestions.length; i++) {
-        // displayQuestions.appendChild();
-        console.log(quizQuestions[i]);
-        var currentQuestion = quizQuestions[i];
-        console.log(currentQuestion.question);
-        console.log(currentQuestion.answers);
+var timer;
 
-    }
-    
+var game = {
 
+questions: questiosn,
+currentQuestion = 0,
+counter: counterStartNumber,
+correct = 0,
+incorrect = 0,
 
-
-
-
-
-    for (var i = 0; i < quizQuestions.length; i ++) {
-        // console.log(quizQuestions[i].answers);
-        // console.log(quizQuestions[i].question)
-        var question = quizQuestions[i].question
-        var answers = quizQuestions[i].answers
-        console.log(question);
-        //display question in html
-        $("#quiz-Questions").html(question)
-    
-
-        for (var j = 0; j < answers.length; j++) {
-            console.log(answers[j]);
-            //display answers in html
-            $("#quiz-Answers").html(answers);
-
-
+//timer countdown function
+countdown: function() {
+    this.counter--;
+    $("#counter-number").text(this.counter);
+    if (this.counter === 0) {
+      console.log("TIME UP");
+      this.timeUp();
         }
-        // displayQuestions.push(quizQuestions.question, quizQuestions.answers[i]);
-    }
-
-    for (var i = 0; i < quizQuestions.length; i++) {
-        var holder = document.createElement("<p>");
-        $("#quiz").append(holder);
-
-        $(holder).attr("id",quizQuestions[i]).text(quizQuestions[i]);
-    }
-
-    
-
-}
-
-function showResults(){}
-
-//display quiz when page loads
-buildQuiz();
-
-//show results when submit button is clicked
-submitButton.addEventListener('click', showResults);
+    },
 
 
+};
+
+//Build game functionality
+
+//Click events
 
 
 
